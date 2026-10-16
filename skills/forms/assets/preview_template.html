@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- フォーム実物プレビュー用テンプレ。<!--FIELDS--> を質問カードで置換して使う。
+     headless Chrome で PNG 化する:
+     "C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --hide-scrollbars
+        --force-device-scale-factor=1 --screenshot="<出力.png>" --window-size=820,<高さ> "file:///<このhtml>"
+     ※ パスは日本語を含まない Temp(ASCII) に置いてから screenshot し、PNG を成果物フォルダへ Copy-Item する。 -->
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; font-family: "Segoe UI", "Yu Gothic UI", Roboto, Arial, sans-serif; }
+  body { background:#f0ebf8; margin:0; padding:24px 0 60px; }
+  .wrap { width:740px; margin:0 auto; }
+  .card { background:#fff; border:1px solid #e0e0e0; border-radius:8px; padding:24px; margin:12px 0; }
+  .head { border-top:10px solid #673ab7; padding-top:22px; }
+  .head h1 { font-size:30px; font-weight:400; margin:0 0 8px; color:#202124; }
+  .head p { font-size:14px; color:#5f6368; margin:6px 0 0; white-space:pre-line; line-height:1.6; }
+  .secbar { background:#673ab7; color:#fff; border-radius:8px; padding:10px 20px; margin:22px 0 4px;
+            font-size:13px; display:flex; align-items:center; gap:10px; }
+  .secbar .branch { background:#fff; color:#673ab7; border-radius:12px; padding:2px 10px; font-size:11px; font-weight:600; }
+  .q { font-size:16px; color:#202124; margin:0 0 4px; }
+  .q .req { color:#d93025; margin-left:4px; }
+  .hint { font-size:12px; color:#5f6368; margin:0 0 12px; white-space:pre-line; line-height:1.5; }
+  .opt { display:flex; align-items:center; gap:12px; font-size:14px; color:#3c4043; margin:10px 0; }
+  .radio { width:18px; height:18px; border:2px solid #5f6368; border-radius:50%; flex:none; }
+  .check { width:16px; height:16px; border:2px solid #5f6368; border-radius:2px; flex:none; }
+  .short { border-bottom:1px solid #dadce0; height:30px; width:55%; }
+  .short .ph { color:#bdc1c6; font-size:13px; line-height:30px; }
+  .para { border:1px solid #dadce0; border-radius:4px; height:64px; width:100%; }
+  .dd { border:1px solid #dadce0; border-radius:4px; height:38px; width:60%; display:flex; align-items:center;
+        justify-content:space-between; padding:0 12px; color:#5f6368; font-size:14px; }
+  .badge { display:inline-block; background:#e8f0fe; color:#1967d2; font-size:11px; border-radius:10px; padding:1px 9px; margin-left:8px; }
+  .topnote { background:#fff8e1; border:1px solid #ffe082; border-radius:8px; padding:12px 18px; font-size:13px; color:#7a5b00; margin-bottom:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topnote">📷 自動レンダリングしたフォームの実物プレビュー（Google Forms と同じ見た目）。</div>
+  <!--FIELDS-->
+  <!-- カード例:
+    タイトル:   <div class="card head"><h1>タイトル</h1><p>説明</p></div>
+    セクション: <div class="secbar">ページN — 見出し<span class="branch">分岐</span></div>
+    ラジオ:     <div class="card"><p class="q">質問<span class="req">*</span></p>
+                  <div class="opt"><span class="radio"></span> 選択肢</div></div>
+    チェック:   <div class="opt"><span class="check"></span> 選択肢</div>
+    短文:       <div class="short"><span class="ph">回答を入力</span></div>
+    長文:       <div class="para"></div>
+    プルダウン: <div class="dd"><span>選択</span><span>▾</span></div>
+  -->
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "builder_project_id": "",
+  "note": "再利用する承認済み Apps Script プロジェクトの id。配布時は空。初回は gforms_cdp.py の open→inject→run→harvest で新規作成し、できた id をここに入れる。FormApp スコープを一度承認すれば、このプロジェクトのコードを差し替えて buildForm を実行する限り OAuth 再承認は不要。新スコープ(例 SpreadsheetApp)を使う時だけ一度だけ再承認が出る。プロジェクトが消えた/IDが無効な時は新規作成して、このIDを更新する。",
+  "account": "<YOUR_EMAIL>",
+  "created": ""
+}
